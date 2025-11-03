@@ -1,0 +1,214 @@
+:root {
+    --primary-color: rgb(240, 185, 11);
+    --text-color: white;
+    --background-color: rgb(24, 26, 32);
+    --secondary-text-color: rgb(234, 236, 239);
+    --main-padding: 3vh 8vw;
+    --third-color: rgb(67, 76, 90);
+    --border-radius: 10px;
+    --light-text-color: rgb(146, 154, 165);
+    --transition: 0.2s all ease-in;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--secondary-text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+.container {
+    min-width: 30vw;
+    min-height: 75vh;
+    padding: 2em;
+    padding-top: 1em;
+    border: 1px solid var(--third-color);
+    border-radius: var(--border-radius);
+    margin: 2em 0 1em;
+}
+
+.container>div {
+    margin-bottom: 2em;
+}
+
+.logo img {
+    height: 5rem;
+}
+
+.logo {
+    margin: 0 !important;
+}
+
+.logIn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qrCode {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid var(--third-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+    background-color: var(--third-color);
+}
+
+form label {
+    font-size: 0.875em;
+    line-height: 1.4em;
+    font-weight: 500;
+    columns: var(--secondary-text-color);
+    display: block;
+    margin: 0.5em;
+}
+
+.mailNumber {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border: 1px solid var(--third-color);
+    border-radius: var(--border-radius);
+    display: block;
+    background-color: transparent;
+    margin-bottom: 2em;
+    color: var(--secondary-text-color);
+}
+
+button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: none;
+    background-color: rgb(252, 213, 53);
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 500;
+    color: var(--background-color);
+    border-radius: var(--border-radius);
+    height: 3em;
+}
+button:hover{
+    background-color: rgb(207, 175, 48);
+}
+
+.mailNumber:hover {
+    border-color: var(--primary-color);
+}
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    color: var(--third-color);
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #555;
+}
+
+.divider::before {
+    margin-right: 10px;
+}
+
+.divider::after {
+    margin-left: 10px;
+}
+
+.loginWith{
+    width: 100%;
+    border: 1px solid var(--light-text-color);
+    border-radius: var(--border-radius);
+    padding: 1em;
+    display: flex;
+    margin-top: 1em;
+}
+.alignCenter{
+    text-align: center;
+    width: 100%;
+}
+
+.createAccount{
+    margin: 1em 0;
+}
+.createAccount a{
+    color: var(--primary-color);
+}
+
+footer{
+    display: flex;
+    gap: 3em;
+    font-size: 0.875em;
+    line-height: 1.4em;
+    font-weight: 400;
+    transition: var(--transition);
+    padding: 3em 0;
+}
+footer div{
+    cursor: pointer;
+}
+
+footer div:hover{
+    color: var(--primary-color);
+}
+
+.tc{
+    display: flex;
+    gap: 0.3em;
+}
+.box{
+    position: relative;
+    top: -0.75em;
+}
+.terms{
+    font-size: 0.875em;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.createAccount a:hover{
+    color: rgb(207, 175, 48);
+}
+
+
+@media (max-width: 768px){
+    :root{
+        --background-color: rgb(32, 38, 48);
+    }
+    body{
+        display: block;
+        padding: 0 2em;
+    }
+    .container{
+        border: none;
+        padding: 0;
+    }
+    .createAccount{
+        width: 100%;
+        text-align: center;
+    }
+    footer{
+        gap: 2em;
+    }
+}
