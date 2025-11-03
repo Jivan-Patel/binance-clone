@@ -70,11 +70,15 @@ main>div{
     background-color: rgb(252, 213, 53);
     border: none;
     border-radius: var(--border-radius);
+    width: 39%;
+    cursor: pointer;
+}
+.signUpbtn a{
     color: var(--background-color);
     font-size: 1em;
     line-height: 1.5em;
     font-weight: 500;
-    width: 39%;
+    text-decoration: none;
 }
 .signUpbtn:hover{
     background-color: var(--primary-color);
